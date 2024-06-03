@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "Broken Link Finder",
+    "version": "1.0",
+    "description": "Add this to check the broken link of a website",
+    "short_name": "Link Checker",
+    "permissions": [
+        "activeTab"
+    ],
+    "background": {
+        "service_worker": "/script/background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "/script/content.js"
+            ]
+        }
+    ]
+}
